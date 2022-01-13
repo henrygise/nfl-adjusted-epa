@@ -50,4 +50,4 @@ Three of Pittsburgh’s last four games were well-above-average showings, which 
 
 ![stillers off playoff](/../main/plot_images/plot_stillers_off_playoff.png)
 
-By controlling for opponent strength, we get a better look at individual game performance and, in turn, a high level view of the progression of each team’s season.
+By controlling for opponent strength, we get a better look at individual game performance and, in turn, a high-level view of the progression of each team’s season.
