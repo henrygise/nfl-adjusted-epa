@@ -1,3 +1,5 @@
+# function for using ridge regression for calculate opponent-adjusted EPA for a given season
+
 nfl_adj_epa_noHFA <- function(season){
   
   # in this case, we do not control for homefield advantage (HFA) because it is included in the EPA model
