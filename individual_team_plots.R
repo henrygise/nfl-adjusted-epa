@@ -1,4 +1,10 @@
+# plotting weekly epa over expected for individual teams
+
+# getting data for all nfl teams (need nfl_team_adj_epa())
+df_all_teams <- nfl_team_adj_epa(2021, logos$team_abbr[! logos$team_abbr %in% c("LAR", "OAK", "SD", "STL")])
+
 # plot team week-by-week epa over expected (offensive)
+
 plot_ind_team_off <- function(plot_team){
   
   # transparent function
