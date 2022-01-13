@@ -1,23 +1,16 @@
 # plot team week-by-week epa over expected (offensive)
-
-# logos
-  logos <- nflfastR::teams_colors_logos
-  
-# create a data frame with all games for all teams
-df_all_teams <- nfl_team_adj_epa(2021, logos$team_abbr[! logos$team_abbr %in% c("LAR", "OAK", "SD", "STL")])
-
 plot_ind_team_off <- function(plot_team){
+  
+  # transparent function
+  transparent <- function(img) {
+    magick::image_fx(img, expression = "0.7*a", channel = "alpha")
+  }
   
   # setup ####
   require(ggplot2)
   require(ggforce)
   require(ggimage)
-  require(magick)
-    
-  # transparent function
-  transparent <- function(img) {
-    magick::image_fx(img, expression = "0.7*a", channel = "alpha")
-  }
+  require(ggforce)
   
   df <- df_all_teams[c(1:9)] %>% filter(team == plot_team & week > 0) %>%
     left_join(logos, by = c("opp" = "team_abbr"))
@@ -60,16 +53,16 @@ plot_ind_team_off <- function(plot_team){
 # plot team week-by-week epa over expected (defensive)
 plot_ind_team_def <- function(plot_team){
   
-  # setup ####
-  require(ggplot2)
-  require(ggforce)
-  require(ggimage)
-  require(magick)
-    
   # transparent function
   transparent <- function(img) {
     magick::image_fx(img, expression = "0.7*a", channel = "alpha")
   }
+  
+  # setup ####
+  require(ggplot2)
+  require(ggforce)
+  require(ggimage)
+  require(ggforce)
   
   df <- df_all_teams[c(1:9)] %>% filter(team == plot_team & week > 0) %>%
     left_join(logos, by = c("opp" = "team_abbr"))
