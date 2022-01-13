@@ -85,7 +85,7 @@ plot_ind_team_def <- function(plot_team){
     scale_x_continuous(breaks = seq(1,18)) +
     scale_y_reverse(limits = c(0.75, -0.75)) +
     
-    labs(title = paste0(plot_team, " defensive EPA/Play Over Expected"),
+    labs(title = paste0(plot_team, " Defensive EPA/Play Over Expected"),
          subtitle = "Using Opponent Adjusted EPA, 2021 NFL Season",
          caption = "By @henrygise | Data: @nflfastR",
          x = "Week",
